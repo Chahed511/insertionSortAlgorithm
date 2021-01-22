@@ -1,0 +1,23 @@
+
+/*nsertion sort is a simple sorting algorithm that works the way we sort playing cards in our hands.
+ Each time we take a new card we put it in the right place in our hand. */
+
+
+ALGORITHM Insertion_sort 
+VAR 
+    T : ARRAY_OF INTEGER ;
+   i ,k, tmp : INTEGER : = 0; // tmp is a temporary variable 
+ BEGIN
+
+  for i from 1 to n-1 do 
+   tmp =  T[i] ; // save the element T[i] in tmp 
+    k=i; // init k with i 
+
+  while ((k>0)and (T[k-1]>tmp)) do 
+     T[k] = T[k-1 ] ; // put t[k-1] in T[k]
+    k=k-1 ; // decrementer k
+ end_while
+  T[k-1] =  tmp;// put tmp in T[k]
+END_FOR
+
+ end 
